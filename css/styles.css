@@ -1,0 +1,98 @@
+/*
+  Base — These are your defaults (html, body, h1, ul, etc)
+  Layout — These divide the page into major sections
+  Module — These are the reusable modular components of a design
+  State — These describe how things look when in a particular state (hidden or expanded, active/inactive)
+  Theme — These define things like a color scheme or typographic treatment across a site
+*/
+
+/********************************************
+  Base
+********************************************/
+* {
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  font-family: 'Roboto Slab', serif;
+}
+
+img {
+  width: 100%;
+}
+
+::placeholder {
+  color: #ccc;
+  font-weight: 300;
+}
+
+/********************************************
+  Layout
+********************************************/
+header {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.search-box {
+  width: 40%;
+  line-height: 2em;
+  padding: 5px 10px;
+  border-radius: 3px;
+  outline: none;
+  border: solid 2px #ddd;
+}
+
+.search-box:focus {
+  border-color: #fff;
+  box-shadow: 0 0 1px 1px rgba(22, 92, 144, 0.5);
+}
+
+.search-box:focus::-webkit-input-placeholder { color:transparent; }
+.search-box:focus:-moz-placeholder { color:transparent; }
+
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.photo-div {
+  float: left;
+  width: 46%; /* (100 - 4*2) / 2 = 46 */
+  margin: 20px 2%;
+}
+
+/********************************************
+  Module
+********************************************/
+
+
+/********************************************
+  State
+********************************************/
+
+
+/********************************************
+  Theme
+********************************************/
+/* styling lightbox */
+.lb-data .lb-caption {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+/********************************************
+  Responsive: Media Query
+********************************************/
+@media (min-width: 768px) {
+  .photo-div {
+    width: 21%; /* (100 - 8*2) / 4 = 21 */
+  }
+}
